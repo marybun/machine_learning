@@ -18,6 +18,6 @@ This notebook uses the MATLAB file [yalefaces.mat](https://github.com/marybun/ma
 
 ## 2. Theoretical Background
 
-**Correlation** refers to the strength of a relationship between two or more constructs, in this case, images. The correlation matrix is calculated with the equation $\bold{c_{jk}} = \bold{x_j^T x_k}$
+**Correlation** refers to the strength of a relationship between two or more constructs, in this case, images. The correlation matrix is calculated with the equation $\bf{c_{jk}} = \bf{x_j^T x_k}$
 
 **Singular Value Decomposition (SVD)**
