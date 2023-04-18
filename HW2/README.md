@@ -10,11 +10,11 @@ Table of Contents
 4. Computational Results
 5. Summary and Conclusions
 
-[correlation.ipynb](https://github.com/marybun/machine_learning/blob/main/correlation.ipynb) explores the concept of correlation and introduces singular value decomposition, following Homework 2
+[correlation.ipynb](https://github.com/marybun/machine_learning/blob/main/HW2/correlation.ipynb) explores the concept of correlation and introduces singular value decomposition, following Homework 2
 
 ## 1. Introduction and Overview
 
-This notebook uses the MATLAB file [yalefaces.mat](https://github.com/marybun/machine_learning/blob/main/yalefaces.mat), which is a matrix containing 39 faces with 65 lighting conditions (2414 faces in total). Each face is a 32x32 grayscale pixel image, which is represented as a column vector of size 1024. The size of the matrix is 1024x2414.
+This notebook uses the MATLAB file [yalefaces.mat](https://github.com/marybun/machine_learning/blob/main/HW2/yalefaces.mat), which is a matrix containing 39 faces with 65 lighting conditions (2414 faces in total). Each face is a 32x32 grayscale pixel image, which is represented as a column vector of size 1024. The size of the matrix is 1024x2414.
 
 ## 2. Theoretical Background
 
