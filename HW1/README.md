@@ -10,7 +10,7 @@ Table of Contents
 4. Computational Results
 5. Summary and Conclusions
 
-[curve_fit.ipynb](https://github.com/marybun/machine_learning/blob/main/curve_fit.ipynb) provides basic examples of curve fitting in Python, following Homework 1.
+[curve_fit.ipynb](https://github.com/marybun/machine_learning/blob/main/HW1/curve_fit.ipynb) provides basic examples of curve fitting in Python, following Homework 1.
 ## 1. Introduction and Overview
 
 The purpose of this notebook is to become familar with curve fitting in regression. Curve fitting is used to fit data to a curve that best represents the underlying pattern of the data, which can then be used to predict other data points. This notebook will explore the basics of curve fitting in Python, such as how to fit a defined model, making initial guesses, how to fit polynomial models, and overfitting.
