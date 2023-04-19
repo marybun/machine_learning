@@ -218,3 +218,5 @@ Comparing the 1st eigenvector with the 1st SVD mode, we can see they are essenti
 The variances for each SVD mode is in decreasing order. SVD mode 0 has the highest variance because it explains the data the most.
 
 Graphing the modes out, we can see that each one looks like a face, with each mode highlighting the most important aspects of a face, such as the eyes, nose, and mouth. They also show the importance of lighting, with each mode having different lighting scenes that were common with faces in the original matrix $X$.
+
+Overall, this notebook shows the importance of correlation, eigenvectors, eigenvalues, and SVD, and how they can be used to better understand a dataset, as well as simplifying it by reducing its dimensionality.
