@@ -39,7 +39,7 @@ X=results['X']
 
 ### i. Correlation Matrix
 
-We compute the correlation matrix of yalefaces.mat and name it $C$.
+We compute an 100x100 correlation matrix of the first 100 images in yalefaces.mat and name it $C$.
 
 ```python
 C = np.zeros((100, 100))
