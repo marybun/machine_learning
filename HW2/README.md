@@ -17,13 +17,13 @@ Table of Contents
 
 ## 1. Introduction and Overview
 
-This notebook uses the MATLAB file [yalefaces.mat](https://github.com/marybun/machine_learning/blob/main/HW2/yalefaces.mat), which is a matrix (which we will name $X$) containing 39 faces with 65 lighting conditions (2414 faces in total). Python indexing starts at 0, so throughout the report, **images will be refered to with their index numbers**. Image 0 is the first image, Image 1 is the second, and so on. Each face is a 32x32 grayscale pixel image, which is represented as a column vector of size 1024. The size of the matrix is 1024x2414. We will find the correlation matrix of these images to find which 2 images are the most and least correlated. We will compute a 10x10 correlation matrix using images from the original matrix $X$, and calculate the eigenvectors and eigenvalues of $X$. We will compare these eigenvectors to singular value decomposition (SVD) modes and use SVD to find the most important aspects of the images of $X$.
+This notebook uses the MATLAB file [yalefaces.mat](https://github.com/marybun/machine_learning/blob/main/HW2/yalefaces.mat), which is a matrix (which we will name $X$) containing 39 faces with 65 lighting conditions (2414 faces in total). Python indexing starts at 0, so throughout the report, **images will be refered to with their index numbers**. Image 0 is the first image, Image 1 is the second, and so on. Each face is a 32x32 grayscale pixel image, which is represented as a column vector of size 1024. The size of the matrix is 1024x2414. We will find the correlation matrix of the first 100 images to find which 2 images of those are the most and least correlated. We will compute a 10x10 correlation matrix using images from the original matrix $X$, and calculate the eigenvectors and eigenvalues of $X$. We will compare these eigenvectors to singular value decomposition (SVD) modes and use SVD to find the most important aspects of the images of $X$.
 
 ## 2. Theoretical Background
 
 **Correlation** refers to the strength of a relationship between two variables, in this case, images. The correlation matrix is calculated with the equation $\bf{c_{jk}} = \bf{x_j^T x_k}$.
 
-**Eigenvalues and Eigenvectors** are linear algebra concepts that describe the most important parts of a square matrix. A square matrix that applies a linear transformation can be described by eigenvectors, which are the directions of the transformation, and their corresponding eigenvalues are the magnitudes. $\bf{Av} = \lambda \bf{v}$, where $\lambda$ is the eigenvalue and $\bf{v}$ is the eigenvector.
+**Eigenvalues and Eigenvectors** are linear algebra concepts that describe the most important parts of a square matrix. A square matrix $\bf{A}$ that applies a linear transformation can be described by eigenvectors, which are the directions of the transformation, and their corresponding eigenvalues are the magnitudes. $\bf{Av} = \lambda \bf{v}$, where $\lambda$ is the eigenvalue and $\bf{v}$ is the eigenvector.
 
 **Singular Value Decomposition (SVD)** takes a matrix and decomposes it into 3 matrices, following the form $\bf{M} = \bf{U \Sigma V^\*}$. The matrix $\bf{U}$ has columns orthogonal to each other, and $\bf{V^\*}$ is the conjugate transpose of a matrix whose columns are also orthogonal to each other. These columns are known as singular vectors and are essentially directions that represent the strongest patterns in a dataset. $\bf{\Sigma}$ is a diagonal matrix of singular values, which are sorted in descending order and represent the magnitudes of the singular vectors. While eigenvalues and eigenvectors are similar to SVD, they can only be used for square matrices, while SVD can be used for any rectangular matrix.
 
@@ -39,7 +39,7 @@ X=results['X']
 
 ### i. Correlation Matrix
 
-We compute the correlation matrix of yalefaces.mat and name it $C$.
+We compute an 100x100 correlation matrix of the first 100 images in yalefaces.mat and name it $C$.
 
 ```python
 C = np.zeros((100, 100))
@@ -218,3 +218,5 @@ Comparing the 1st eigenvector with the 1st SVD mode, we can see they are essenti
 The variances for each SVD mode is in decreasing order. SVD mode 0 has the highest variance because it explains the data the most.
 
 Graphing the modes out, we can see that each one looks like a face, with each mode highlighting the most important aspects of a face, such as the eyes, nose, and mouth. They also show the importance of lighting, with each mode having different lighting scenes that were common with faces in the original matrix $X$.
+
+Overall, this notebook shows the importance of correlation, eigenvectors, eigenvalues, and SVD, and how they can be used to better understand a dataset, as well as simplifying it by reducing its dimensionality.
