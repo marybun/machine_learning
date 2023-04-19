@@ -101,7 +101,7 @@ plt.show()
 ```
 ### iii. 10x10 Correlation Matrix
 
-We can compute a different correlation matrix, $C_10$, which will be the correlations between the 0, 312, 511, 4, 2399, 112, 1023, 86, 313, and 2004th images.
+We can compute a different correlation matrix, $C_{10}$, which will be the correlations between the 0, 312, 511, 4, 2399, 112, 1023, 86, 313, and 2004th images.
 
 ```python
 X_10 = X[:, [0, 312, 511, 4, 2399, 112, 1023, 86, 313, 2004]]
