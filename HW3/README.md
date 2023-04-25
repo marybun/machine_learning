@@ -439,7 +439,7 @@ title="Mean accuracy for decision tree: " + '%.1f' % (100*np.mean(CDT)) +"%"
 ax.set_title(title)
 ```
 
-From section iii, we found the hardest and easiest pairs to classify. We can use each model on these pairs to compare the accuracy of each.
+From section iii, we found the hardest and easiest pairs to classify. We can use each model on these pairs to compare the accuracy of each. There were multiple pairs that reached 100% accuracy, so we'll just choose one.
 
 ```python
 # Hardest pair: (5, 8)
