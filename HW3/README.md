@@ -12,11 +12,13 @@ Table of Contents
 4. Computational Results
 5. Summary and Conclusions
 
+## Abstract
+
 [classify.ipynb](https://github.com/marybun/machine_learning/blob/main/HW3/classify.ipynb) showcases different methods to classifying the digits in the MNIST dataset, following Homework 3. Using SVDs, we find which of the three methods (LDA, SVM, or Decision Trees) classifies the data most accurately.
 
 ## 1. Introduction and Overview
 
-This notebook uses the MNIST dataset, which is a dataframe of size 70000x784. Each row is a vectorized 28x28 pixel image of a handwritten digit (0 to 9). We start by taking the full SVD of the data, then finding the number of modes necessary for image reconstruction to cut down on computation time. We use this to take the truncated SVD, which we use for 3 classification methods: Linear Discriminant Analysis, Support Vector Machines, and Decision Trees.
+This notebook uses the MNIST dataset, which is a dataframe of size 70000x784. Each row is a vectorized 28x28 pixel image of a handwritten digit (0 to 9). We start by taking the full SVD of the data, then finding the number of modes necessary for image reconstruction to cut down on computation time. We use this to take the truncated SVD, which we use for 3 classification methods: Linear Discriminant Analysis, Support Vector Machines, and Decision Trees. We use these 3 methods to classify the MNIST data 2 digits at a time, then 3, then all the digits together.
 
 ## 2. Theoretical Background
 
