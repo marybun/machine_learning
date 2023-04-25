@@ -7,4 +7,4 @@ All notebooks in this repository are reports on homework assignments in EE 399A,
 Table of Contents
 1. [Curve Fitting](https://github.com/marybun/machine_learning/blob/main/HW1)
 2. [Correlation](https://github.com/marybun/machine_learning/blob/main/HW2)
-3. [SVDs and PCA](https://github.com/marybun/machine_learning/blob/main/HW3) 
+3. [Classifying A Dataset](https://github.com/marybun/machine_learning/blob/main/HW3) 
