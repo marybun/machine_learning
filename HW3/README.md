@@ -22,10 +22,13 @@ This notebook uses the MNIST dataset, which is a dataframe of size 70000x784. Ea
 
 **Singular Value Decomposition (SVD)** decomposes a matrix into 3 matrices, following the form $\bf{M} = \bf{U \Sigma V^\*}$. The matrix $\bf{U}$ has columns orthogonal to each other, and $\bf{V^\*}$ is the conjugate transpose of a matrix whose columns are also orthogonal to each other. These columns are known as singular vectors and are essentially directions that represent the strongest patterns in a dataset. $\bf{\Sigma}$ is a diagonal matrix of singular values, which are sorted in descending order and represent the magnitudes of the singular vectors.
 
-**Linear Discriminant Analysis (LDA)** is a classifier model 
-**Cross-Validation**
-**Support Vector Machines (SVM)**
-**Discision Trees**
+**Linear Discriminant Analysis (LDA)** is a classifier model that discriminates between classes by taking linear combinations of the most important features of an image, called discriminant functions, and finding which images match which discriminant functions.
+
+**Cross-Validation** is a technique to evaluate the performance of a model by taking random training and testing points and running the model on them. This process is repeated to get a sense of how well the model does on different data points. It also helps reduce the risk of overfitting.
+
+**Support Vector Machine (SVM)** is classifier model that works by mapping the data onto a higher dimensional plane, and classifying by finding the hyperplane that separates the classes the most.
+
+**Descision Tree** is a classifier model that classifies data in a heirarchical fashion, by recursively splitting the data. It continues to split the data until they are all classified correctly.
 
 ## 3. Algorithm Implementation and Development
 
@@ -151,6 +154,7 @@ for i in range(9):
 plt.suptitle('Loss Matrix')
 plt.tight_layout()
 ```
+In the SVD matrix, the left and right singular vectors $\bf{U}$ and $\bf{V^\*}$ represent the modes of the images, that is, the most prominent features of the images. The matrix $\bf{\Sigma}$ is the diagonal matrix of singular values that scale each singular vector. The higher the magnitude of the singular value, the more prominent the feature is.
 
 Next, we project 3 V modes (1, 2, and 4) onto a 3D plot with colored digit labels.
 
@@ -196,7 +200,7 @@ S01 = np.diag(svd.singular_values_)
 VT01 = svd.components_
 ```
 
-And build an LDA that classifies the two digits by training on the first 60 images of each and testing on 20 images of each.
+And build an LDA that classifies the two digits by training on the first 60 images of each and testing on 20 images of each. It uses 2 arbitrary feature columns, since using more would be more computationally costly.
 
 ```python
 plt.rcParams['figure.figsize'] = [12, 12]
@@ -528,6 +532,71 @@ print('accuracy of DecisionTree:', '%.1f' % (100*accDT) +"%")
 ```
 
 ## 4. Computational Results
+
+### i. Truncated SVD of MNIST
+
+![image](https://user-images.githubusercontent.com/108769794/234184355-7626fc19-db2d-44de-936c-3124b8cd0f57.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183520-63d7b5f5-8305-4d31-9133-88d1e3c81704.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183718-788d028a-7149-4e6c-8267-5726194a6841.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183737-72c77397-cbe1-4b37-a61d-0e911f5b863a.png)
+
+**Rank of MNIST: 713**
+
+![image](https://user-images.githubusercontent.com/108769794/234183759-aa7d0cbb-268e-470a-af72-0d6109083349.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183775-5b3d7190-2b51-4e3c-b38f-936d817d45fd.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183796-d98d5317-a339-4c46-9ca6-d34dcd575581.png)
+
+### ii. Building A Linear Classifier
+
+![image](https://user-images.githubusercontent.com/108769794/234183824-cc7a90dc-900f-4b7b-b233-d349b0ed4be7.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183868-7876a8b3-4729-4b12-b3f2-91ffdd74cd8b.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183893-e1f69f0e-1c9a-47ff-8e65-68f35cc3d9fd.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183916-2c5b8608-8057-464f-beb7-aee70ac817fd.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234183927-1e89e04a-0343-43bb-b23d-8084d593f97a.png)
+
+### iii. Classifying All Digit Pairs
+
+![image](https://user-images.githubusercontent.com/108769794/234183975-c9dbfaa4-80dd-4dea-80ae-bdf58597f873.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234184000-d0497e80-0a75-467e-9d25-066efeaca454.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234184009-a1e1f72f-d6e5-43c2-a69c-166ca85040c3.png)
+
+### iv. Classifying All Digits
+
+![image](https://user-images.githubusercontent.com/108769794/234184058-b8b727eb-4d19-452c-9adc-0dd91e7664de.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234184090-08c8518d-e963-4e25-8830-6d27fcb5330f.png)
+
+![image](https://user-images.githubusercontent.com/108769794/234184105-9da6b839-63a5-44be-9e53-d17102f06bde.png)
+
+### v. Comparing Classifier Models
+
+Hardest Pair (5, 8):
+
+accuracy of LDA: 40.0%
+
+accuracy of SVM: 72.5%
+
+accuracy of DecisionTree: 67.5%
+
+
+Easiest Pair (6, 9):
+
+accuracy of LDA: 100.0%
+
+accuracy of SVM: 100.0%
+
+accuracy of DecisionTree: 100.0%
 
 ## 5. Summary and Conclusions
 
