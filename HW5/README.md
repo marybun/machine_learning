@@ -11,7 +11,7 @@ Table of Contents
 
 ## Abstract
 
-[NN.ipynb](https://github.com/marybun/machine_learning/blob/main/HW5/lorenz.ipynb) showcases forcasting with neural networks, following Homework 5. Using a feed forward neural network, we predict future outcomes of the Lorenz attractor from random initial data points, and compare the efficiency between other neural network models.
+[lorenz_NN.ipynb](https://github.com/marybun/machine_learning/blob/main/HW5/lorenz_NN.ipynb) showcases forcasting with neural networks, following Homework 5. Using a feed forward neural network, we predict future outcomes of the Lorenz attractor from random initial data points, and compare the efficiency between other neural network models.
 
 ## 1. Introduction and Overview
 
