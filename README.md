@@ -8,3 +8,4 @@ Table of Contents
 1. [Curve Fitting](https://github.com/marybun/machine_learning/blob/main/HW1)
 2. [Correlation](https://github.com/marybun/machine_learning/blob/main/HW2)
 3. [Classifying A Dataset](https://github.com/marybun/machine_learning/blob/main/HW3) 
+4. [Building A Neural Network](https://github.com/marybun/machine_learning/blob/main/HW4)
