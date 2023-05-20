@@ -13,7 +13,7 @@ Table of Contents
 
 ## Abstract
 
-[SHRED.ipynb](https://github.com/marybun/machine_learning/blob/main/HW6/SHRED.ipynb) performs analyses on how well the SHallow REcurrent Decoder (SHRED) predicts a dataset of weekly mean sea-surface temperature from 1992 to 2019. We analyse the model's performance over a range of time lags, noise values, and sensors.
+[SHRED.ipynb](https://github.com/marybun/machine_learning/blob/main/HW6/SHRED.ipynb) performs analyses on how well the SHallow REcurrent Decoder (SHRED) predicts a dataset of weekly mean sea-surface temperature from 1992 to 2019. We build off the code in the pyshred example by analyzing the model's performance over a range of time lags, noise values, and sensors.
 
 ## 1. Introduction and Overview
 
