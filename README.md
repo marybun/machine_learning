@@ -10,3 +10,4 @@ Table of Contents
 3. [Classifying A Dataset](https://github.com/marybun/machine_learning/blob/main/HW3) 
 4. [Building A Neural Network](https://github.com/marybun/machine_learning/blob/main/HW4)
 5. [Lorenz Equations and Forecasting](https://github.com/marybun/machine_learning/blob/main/HW5)
+6. [SHallow REcurrent Decoder (SHRED)](https://github.com/marybun/machine_learning/blob/main/HW6)
