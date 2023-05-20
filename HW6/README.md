@@ -49,7 +49,7 @@ load_X = load_data('SST')
 num_epochs = 200
 ```
 
-Next, we define the SHRED performance function that creates, trains, and tests the SHRED model and plots the results.
+Next, we define the SHRED performance function that creates, trains, and tests the SHRED model and plots the results. By default, the number of sensors is 3, randomly placed, and the trajectory length (lags) is 52, which is a full year of measurements.
 
 ```python
 # Function to train and valid the model for a specific lags and num_sensors
@@ -199,15 +199,36 @@ plt.title("Performance of SHRED as a function of the number of sensors")
 ### i. SHallow REcurrent Decoder (SHRED)
 
 mean square error: 0.031557165
-image.png
+
+![image](https://github.com/marybun/machine_learning/assets/108769794/e67c5daa-34c4-43bd-9753-26ae38f0f7ef)
 
 ### ii. Performance over Time Lag
+
+![image](https://github.com/marybun/machine_learning/assets/108769794/c892e01b-6606-4606-bfff-9629ac1763ce)
+
 ### iii. Performance over Noise
+
+![image](https://github.com/marybun/machine_learning/assets/108769794/301a529d-57c7-4099-a120-d0774137e37f)
+
+
 ### iv. Performance over Number of Sensors
+
+![image](https://github.com/marybun/machine_learning/assets/108769794/72d54294-1999-418b-a49e-70fe78b11c47)
 
 ## 5. Summary and Conclusions
 
 ### i. SHallow REcurrent Decoder (SHRED)
+
+Using only 3 sensors, SHRED accurately predicts the sea surface temperature across the globe.
+
 ### ii. Performance over Time Lag
+
+When the time lag is increased, the model is given much more information in terms of trajectory length, meaning it can perform much better.
+
 ### iii. Performance over Noise
+
+As expected, increasing the noise increases the error, however, the model still does relatively well even at the highest $\alpha$ value of 0.2.
+
 ### iv. Performance over Number of Sensors
+
+Similarly to the time lag analysis, increasing the number of sensors provides more information for the model, thus improving performance significantly. There is an especially significant drop in error between 3 and 10 sensors, which shows the importance of finding the ideal number of sensors, such that you have a small amount of sensors while still having enough to get an accurate prediction.
